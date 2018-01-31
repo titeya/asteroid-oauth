@@ -15,7 +15,14 @@
 		"type": "git",
 		"url": "https://github.com/titeya/asteroid-oauth.git"
 	},
-	"keywords": [ "ddp", "asteroid", "meteor", "oauth", "google", "facebook" ],
+	"keywords": [
+		"ddp",
+		"asteroid",
+		"meteor",
+		"oauth",
+		"google",
+		"facebook"
+	],
 	"author": "Nicolas Bellamy <n.bellamy@titeya.com>",
 	"license": "MIT",
 	"bugs": {

@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/mondora/asteroid-oauth-mixin.svg?branch=master)](https://travis-ci.org/mondora/asteroid-oauth-mixin)
-[![Coverage Status](https://coveralls.io/repos/mondora/asteroid-oauth-mixin/badge.svg?branch=master&service=github)](https://coveralls.io/github/mondora/asteroid-oauth-mixin?branch=master)
 
 # asteroid-oauth-mixin
 
@@ -10,10 +8,11 @@ list of available provider) or you can add a custom provider.
 ## Available provider
 
 *   Google
+*   Facebook
 
 ## Install
 
-    npm install asteroid-oauth-mixin
+    npm install asteroid-oauth
 
 ## Development environment setup
 
@@ -24,7 +23,7 @@ Run `npm test` to run unit tests, or `npm run dev` to have `mocha` re-run your t
 
 ```js
 import {createClass} from "asteroid";
-import * as asteroidOauthMixin from "asteroid-oauth-mixin";
+import * as asteroidOauthMixin from "asteroid-oauth";
 
 const Asteroid = createClass([asteroidOauthMixin]);
 
@@ -59,7 +58,7 @@ asteroid.getServiceConfig = providerName => {
 *   Somewhere in your code
 */
 
-asteroid.loginWith("google")
+asteroid.loginWith("facebook")
     .then(() => console.log("login successful"))
     .catch(() => console.log("error logging in"))
 
@@ -69,7 +68,7 @@ asteroid.loginWith("google")
 
 ```js
 import {createClass} from "asteroid";
-import * as asteroidOauthMixin from "asteroid-oauth-mixin";
+import * as asteroidOauthMixin from "asteroid-oauth";
 import * as asteroidImmutableMixin from "asteroid-immutable-collections-mixin";
 
 const Asteroid = createClass([asteroidImmutableMixin, asteroidOauthMixin]);
@@ -80,7 +79,7 @@ const asteroid = new Asteroid({platform, endpoint});
 *   Somewhere in your code
 */
 
-asteroid.loginWith("google")
+asteroid.loginWith("facebook")
     .then(() => console.log("login successful"))
     .catch(() => console.log("error logging in"))
 
