@@ -9,6 +9,7 @@ list of available provider) or you can add a custom provider.
 
 *   Google
 *   Facebook
+*   Twitter
 
 ## Install
 
