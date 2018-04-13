@@ -16,7 +16,11 @@ export default class BrowserOauthFlow {
       credentialToken: this.credentialToken
     });
     this.intervalId = window.setInterval(() => {
-      this.popup.postMessage(request, this.host);
+      try {
+        this.popup.postMessage(request, this.host);
+      } catch (error) {
+        return;
+      }
     }, 100);
     window.addEventListener("message", ::this._onMessage);
   }
