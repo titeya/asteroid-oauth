@@ -14,6 +14,7 @@ export function getOptions({ url, configCollection, scope }) {
 		client_id: getOauthClientId(configCollection),
 		redirect_uri: getOauthProtocol(protocol) + `//${host}/_oauth/facebook`,
 		state: getOauthState(credentialToken),
+		auth_type: 'rerequest',
 		scope: scope || 'email'
 	};
 	const loginUrl = parse('https://www.facebook.com/v2.3/dialog/oauth').set('query', query).toString();
